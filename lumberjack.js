@@ -89,7 +89,9 @@
     this.log = function () {
       log(arguments, 'log');
     };
-    
+    this.debug = function() {
+      log(arguments, 'debug');
+    }
     this.dir = function () {
       log(arguments, 'dir');
     };  
