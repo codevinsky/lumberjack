@@ -2,11 +2,11 @@
   "name": "lumberjack",
   "main": "lumberjack.js",
   "version": "1.0.0",
-  "homepage": "https://github.com/codevinsky/lumberjack",
+  "homepage": "https://github.com/jbail/lumberjack",
   "authors": [
-    "Jeremy Dowell <jeremy.dowell@architectinginnovation.com>"
+    "jbail"
   ],
-  "description": "a JavaScript utility that hijacks the browser console, makes it more beautiful and enhances it so logs can be split into more manageable chunks",
+  "description": "A JavaScript utility that hijacks the browser console, makes it more beautiful and enhances it so logs can be split into more manageable chunks",
   "keywords": [
     "console"
   ],
