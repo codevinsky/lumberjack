@@ -16,7 +16,7 @@
           enabled: typeof options.enabled != 'undefined' ? options.enabled : true,
           color: typeof options.color != 'undefined' ? options.color : '#bada55',
           background: typeof options.background != 'undefined' ? options.background : '#111'
-        }, 
+        },
         colorSupported = isColorSupported(),
         streams = {}, logs = [];
 
@@ -48,8 +48,8 @@
     };
 
     function isColorSupported() {
-      //it feels dirty doing user agent browser detection, but i don't think 
-      //there's another way to detemine if the console supports color. 
+      //it feels dirty doing user agent browser detection, but i don't think
+      //there's another way to detemine if the console supports color.
       var ua = navigator.userAgent.toLowerCase();
       return ua.indexOf('firefox') != -1 || ua.indexOf('chrome') != -1;
     }
@@ -64,7 +64,7 @@
         stream = new Console(console, name, options);
         streams[name] = stream;
       }
-      
+
       return stream;
     };
 
@@ -75,7 +75,7 @@
         opts.enabled = true;
       }
     };
-    
+
     this.off = function (name) {
       if (typeof name != 'undefined') {
         streams[name].off();
@@ -83,11 +83,11 @@
         opts.enabled = false;
       }
     };
-    
+
     this.logs = function () {
       return logs;
     }
-    
+
     this.log = function () {
       log(arguments, 'log');
     };
@@ -96,19 +96,19 @@
     }
     this.dir = function () {
       log(arguments, 'dir');
-    };  
-    
+    };
+
     this.info = function () {
       log(arguments, 'info');
     };
-    
+
     this.warn = function () {
       log(arguments, 'warn');
     };
-    
+
     this.error = function () {
       log(arguments, 'error');
-    };  
+    };
 
     this.color = function (color) {
       opts.color = color;
