@@ -28,7 +28,7 @@
       args = argumentsToArray(args);
 
       if (opts.enabled) {
-        if (colorSupported && name != undefined && type ) {
+        if (colorSupported && name !== undefined && type ) {
           color = (type !== 'dir') ? '%c ' : '';
           //hat tip: http://stackoverflow.com/questions/7505623/colors-in-javascript-console
           args.unshift('%c ' + name + ' ', 'color:' + opts.color + '; background:' + opts.background);
@@ -39,13 +39,13 @@
         }
       }
 
-      args.push(new Date()) //add timestamp
+      args.push(new Date()); //add timestamp
       logs.push(args);
-    };
+    }
 
     function argumentsToArray(args) {
       return Array.prototype.slice.call(args, 0);
-    };
+    }
 
     function isColorSupported() {
       //it feels dirty doing user agent browser detection, but i don't think
@@ -86,14 +86,14 @@
 
     this.logs = function () {
       return logs;
-    }
+    };
 
     this.log = function () {
       log(arguments, 'log');
     };
     this.debug = function() {
       log(arguments, 'debug');
-    }
+    };
     this.dir = function () {
       log(arguments, 'dir');
     };
@@ -112,11 +112,11 @@
 
     this.color = function (color) {
       opts.color = color;
-    }
+    };
 
     this.background = function (background) {
       opts.background = background;
-    }
+    };
   }
 
 
