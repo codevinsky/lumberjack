@@ -11,7 +11,7 @@
 (function () {
 
   function Console(console, name, options) {
-    var options = options || {},
+    options = options || {},
         opts = {
           enabled: typeof options.enabled != 'undefined' ? options.enabled : true,
           color: typeof options.color != 'undefined' ? options.color : '#bada55',
