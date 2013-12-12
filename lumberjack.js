@@ -24,10 +24,12 @@
 
     //private
     function log(args, type) {
+      var color;
       args = argumentsToArray(args);
-      
+
       if (opts.enabled) {
         if (colorSupported && name != undefined && type ) {
+          color = (type !== 'dir') ? '%c ' : '';
           //hat tip: http://stackoverflow.com/questions/7505623/colors-in-javascript-console
           args.unshift('%c ' + name + ' ', 'color:' + opts.color + '; background:' + opts.background);
           console[type].apply(console, args);
